@@ -1,0 +1,18 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './styles/gradients.css';
+@layer base {
+  body {
+    @apply bg-gray-50 dark:bg-gray-900;
+    
+  }
+}
+@layer components {
+  .fancy-shadow {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .dark .fancy-shadow {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+}

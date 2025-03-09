@@ -1,0 +1,61 @@
+/* Modern Calendar Styles */
+.modern-calendar {
+  --fc-border-color: theme('colors.gray.200');
+  --fc-button-bg-color: theme('colors.white');
+  --fc-button-border-color: theme('colors.gray.300');
+  --fc-button-text-color: theme('colors.gray.700');
+  --fc-button-hover-bg-color: theme('colors.gray.50');
+  --fc-button-hover-border-color: theme('colors.gray.400');
+  --fc-button-active-bg-color: theme('colors.blue.50');
+  --fc-button-active-border-color: theme('colors.blue.300');
+  --fc-event-bg-color: transparent;
+  --fc-event-border-color: transparent;
+  --fc-event-text-color: inherit;
+  --fc-today-bg-color: theme('colors.blue.50');
+}
+.modern-calendar .fc-button {
+  @apply shadow-sm font-medium text-sm px-4 py-2 rounded-md transition-all duration-200;
+}
+.modern-calendar .fc-button:hover {
+  @apply shadow-md;
+}
+.modern-calendar .fc-button-primary:not(:disabled):active,
+.modern-calendar .fc-button-primary:not(:disabled).fc-button-active {
+  @apply shadow-inner;
+}
+.modern-calendar .fc-toolbar-title {
+  @apply text-xl font-semibold text-gray-900;
+}
+.modern-calendar .fc-view {
+  @apply border border-gray-200 rounded-lg overflow-hidden bg-white;
+}
+.modern-calendar .fc-scrollgrid {
+  @apply border-gray-200;
+}
+.modern-calendar .fc-col-header-cell {
+  @apply bg-gray-50;
+}
+.modern-calendar .fc-timegrid-slot-label {
+  @apply text-sm font-medium text-gray-500;
+}
+.modern-calendar .fc-timegrid-axis {
+  @apply text-sm font-medium text-gray-500;
+}
+.modern-calendar .fc-timegrid-now-indicator-line {
+  @apply border-red-400;
+}
+.modern-calendar .fc-timegrid-now-indicator-arrow {
+  @apply border-red-400;
+}
+.modern-calendar .fc-highlight {
+  @apply bg-blue-50 bg-opacity-50;
+}
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .modern-calendar .fc-toolbar {
+    @apply flex-col gap-2;
+  }
+  .modern-calendar .fc-toolbar-title {
+    @apply text-lg;
+  }
+}
